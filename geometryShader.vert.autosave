@@ -1,0 +1,19 @@
+/*
+    Purpose: This code describes the function of Prometheus's geometry shader.  Implementing the graphics using the
+    OpenGL Shading Language (GLSL) ensures efficient visualization and contributes to the code's longevity.  This
+    shader can determine which model is being requested from the GUI and activate the appropriate subroutines
+    to generate that model.  Atom coordinates are passed to this shader in a vertex buffer object (VBO), and vertices of
+    the model being displayed (spheres, cylinders, surfaces) are all generated procedurally within this shader.  We leverage the
+    power of the GPU to do as much of the heavy lifting as possible.
+
+*/
+
+
+
+void main(void)
+{
+    for (i = 0; i < gl_in.length(); i++)
+    {
+        gl_Position = gl_in[i].gl_Position;
+    }
+}
